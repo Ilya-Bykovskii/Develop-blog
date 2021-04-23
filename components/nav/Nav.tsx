@@ -13,7 +13,7 @@ import Style from './Style.module.scss'
 // export function getServerSideProps(req: )
 
 export default function Nav() {
-    const pages: Readonly<Array<keyof stdNS.Pages>> = ["Home", "Posts", "Scroll", "About"];
+    const pages: Readonly<Array<keyof stdNS.Pages>> = ["Home", "Topics", "Scroll", "About"];
     return (
         <nav
             className={Style.nav}

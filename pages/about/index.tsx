@@ -6,7 +6,6 @@ import {stdNS} from './../../namespace/std';
 import BaseL from './../../layouts/baseL/BaseL'
 
 // styles
-import Style from './Style.module.scss'
 
 
 export default function About() {

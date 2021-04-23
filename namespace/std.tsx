@@ -4,7 +4,7 @@ export namespace stdNS {
     export interface Pages {
         'Home': '/',
         'About': '/about',
-        "Posts": '/posts',
+        "Topics": '/topic',
         "Scroll": '/scroll',
     } 
 

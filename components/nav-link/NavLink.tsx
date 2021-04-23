@@ -18,7 +18,7 @@ export default function NavLink(props: props) {
     const pageLinks: Readonly<stdNS.Pages> = {
         "Home": '/',
         "About": '/about',
-        "Posts": '/posts',
+        "Topics": '/topic',
         "Scroll": '/scroll'
     }
 

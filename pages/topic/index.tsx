@@ -1,12 +1,13 @@
 // types
 /// <reference path="./../../namespace/std.tsx" />
-import {stdNS} from './../../namespace/std';
+import {stdNS} from '../../namespace/std';
+
+// layout
+import BaseL from '../../layouts/baseL/BaseL'
 
 // components
-import BaseL from './../../layouts/baseL/BaseL'
 
 // styles
-import Style from './Style.module.scss'
 
 
 export default function About() {
@@ -14,7 +15,7 @@ export default function About() {
         <BaseL
             title={'Posts'}
         >
-            <h1>Posts</h1>
+            <h1>Topoc</h1>
         </BaseL>
     )
 }

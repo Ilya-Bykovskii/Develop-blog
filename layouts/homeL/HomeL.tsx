@@ -42,13 +42,9 @@ export default function HomeL(props: stdNS.LayoutProps) {
                             content={'View posts'}
                         />
                     </div>
-                    <div className={Style.pyromide}>
-                        <Pyromid/>
-                    </div>
                 </div>
             </header>
             <main className={Style.main}>
-                    
                 {props.children}
             </main>
         </>

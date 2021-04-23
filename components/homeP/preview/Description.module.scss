@@ -1,0 +1,21 @@
+.description {
+    width: 40vw;
+    font-size: 21px;
+
+    .description__lable {
+        font-size: 42px;
+        font-weight: 600;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #000;
+    }
+    
+    .description__vision {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 1000px) {
+    .description {
+        width: 70vw;
+    }
+}
