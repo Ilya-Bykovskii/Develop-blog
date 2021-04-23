@@ -11,7 +11,8 @@ import Link from 'next/link';
 import Style from './Style.module.scss'
 
 interface props {
-    page: keyof stdNS.Pages
+    page: keyof stdNS.Pages,
+    id?: number,
 }
 
 export default function NavLink(props: props) {
@@ -24,7 +25,11 @@ export default function NavLink(props: props) {
 
     return(
             <Link
-                href={pageLinks[props.page]}
+                href={props.id ? 
+                    `${pageLinks[props.page]}/${props.id}`
+                :
+                    pageLinks[props.page]
+                }
             >
                 <a className={Style.link}>{props.page}</a>
             </Link>
