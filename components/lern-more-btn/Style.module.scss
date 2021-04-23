@@ -1,0 +1,17 @@
+.btn {
+    transition: all 200ms ease-in-out 100ms;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 10px 15px;
+    width: max-content;
+
+    &:hover {
+        transform: scale(1.01);
+        color: #fff;
+        border-color: #fff;
+    }
+
+    .btn__link {
+        font-size: 18px;
+    }
+}

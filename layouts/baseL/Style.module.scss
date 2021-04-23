@@ -1,0 +1,30 @@
+.header {
+    // background-image: url('./logo_theme.jpg');
+    // background-size: 100%;
+    background-color: #000;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+
+    .header__wrapper {
+        height: inherit;
+        width: inherit;
+        background-color:rgba(0, 0, 0, 0.3);
+        background-position-y: 0;
+        padding: 35px 7vw;
+        display: flex;
+        align-content: center;    
+
+        .title {
+            display: inline-block;
+            margin: 0 30vw 0 0 ;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    }
+}
+
+.main {
+    padding: 50px 5vw 0 ;
+}

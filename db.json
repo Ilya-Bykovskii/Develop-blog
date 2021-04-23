@@ -1,0 +1,55 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "",
+            "preview": "",
+            "body": "",
+            "createID": 1
+        },
+        {
+            "id": 2,
+            "title": "",
+            "preview": "",
+            "body": "",
+            "createID": 1
+        },
+        {
+            "id": 2,
+            "title": "",
+            "preview": "",
+            "body": "",
+            "createID": 1
+        },
+        {
+            "id": 3,
+            "title": "",
+            "preview": "",
+            "body": "",
+            "createID": 1
+        },
+        {
+            "id": 4,
+            "title": "",
+            "preview": "",
+            "body": "",
+            "createID": 1
+        },
+        {
+            "id": 5,
+            "title": "",
+            "preview": "",
+            "body": "",
+            "createID": 1
+        }
+    ],
+
+    "users": [
+        {
+            "id": 1,
+            "password": 1,
+            "login": "a", 
+            "name": "Admon"
+        }
+    ]
+}
