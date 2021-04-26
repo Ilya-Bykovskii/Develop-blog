@@ -40,12 +40,17 @@ export default function TopicsFull(topic: {json: reqNS.ArticleFull}) {
         <BaseL
             title={`${data.title}`}
         >
-            <section className={Style.topic}>
-                <h2 className={Style.title}>
+            <article className={Style.topic}>
+                <h2 className={Style.topic__title}>
                     {data.title}
                 </h2>
-                {data.body.map(elem => <p>{elem}</p>)}
-            </section>
+                {data.body.map((elem, index) => <p 
+                        className={Style.topic__content}
+                        key={index}
+                    >
+                        {elem}
+                    </p>)}
+            </article>
             <Nav
                 id={+route.query.id}
             />

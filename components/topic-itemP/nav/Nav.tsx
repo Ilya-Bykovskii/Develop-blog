@@ -10,8 +10,11 @@ import Style from './nav.module.scss';
 export default function Nav(prop: {id: number}) {
     return (
         <section className={Style.nav}>
-            <ul>
-                <li key={1}>
+            <ul className={Style.nav__wrapper}>
+                <li 
+                    key={1} 
+                    className={Style.nav__item}
+                >
                     {(prop.id - 1 > 0) ? 
                         <LinkNavTopic
                             id={prop.id - 1}
