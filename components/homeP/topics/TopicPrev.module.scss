@@ -6,7 +6,6 @@
     margin: 0 3vw;
 
     background: #fff;
-    // background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     border-radius: 10px;    
     border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -37,5 +36,15 @@
     
     .item__prev {
         margin-bottom: 100px;
+    }
+}
+
+.active {
+    cursor: pointer;
+    transition: all 200ms linear 100ms;
+
+    &:hover {
+        transform: scale(1.05);
+        border: 4px solid rgb(31, 138, 135);
     }
 }

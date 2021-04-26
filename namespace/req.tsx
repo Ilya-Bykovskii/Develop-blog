@@ -11,7 +11,7 @@ export namespace reqNS {
     }
 
     export interface ArticleFull extends Article {
-        body: string,
+        body: Array<string>,
     }
 
     export type  RequestStatus = 'prepair' | 'send' | 'good' | 'err';

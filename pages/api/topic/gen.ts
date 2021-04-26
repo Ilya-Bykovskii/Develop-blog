@@ -1,10 +1,10 @@
 export default async function GenTopics(req, res) {
-    const length = 8;
+    const length = 9;
     const href = 'http://localhost:4000/topic-prev/'
     let topicsID = new Set();
     let topics = [];
     while (topicsID.size < 6) {
-        const newID = Math.floor(Math.random() * 10) % length;        
+        const newID = Math.floor(Math.random() * 10) % length + 1;        
 
         if (topicsID.has(newID)) continue;
 

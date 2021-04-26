@@ -1,10 +1,10 @@
 // types
 /// <reference path="./../../../namespace/req.tsx" />
 import { reqNS } from './../../../namespace/req';
-import {CaretLeft, CaretRight} from 'phosphor-react';
+import {CaretLeft, CaretRight, Spinner} from 'phosphor-react';
 
 // system files
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 
 // components
 import TopicPrev from './TopicPrev';
@@ -17,8 +17,10 @@ export default function TopicCont() {
     const [load, setLoad] = useState(false);
     const [translate, setTranslate] = useState(0);
 
+    const spinner = useRef<HTMLHeadingElement>();
+
     const topicReq = `http://localhost:3000/api/topic/gen`;
-    const step = 87;
+    let step = 87;
 
     function move(derection: 'left' | 'right') {
         console.log(translate);
@@ -28,7 +30,7 @@ export default function TopicCont() {
             return;
         }
         
-        if (translate === -87)  setTranslate(prev => prev + step)
+        if (derection === 'right' && translate === -87)  setTranslate(prev => prev + step)
     }
 
     function genEmptyTopic() {        
@@ -43,24 +45,39 @@ export default function TopicCont() {
     }
 
     useEffect(() => {
+        console.log('start request');
+        
         fetch(topicReq)
         .then(req => req.json())
         .then(json => setTopics(json))
         .catch(err => console.error(err))
-        .finally(() => setLoad(true));
+        .finally(() => setLoad(true))
+        .finally(() => console.log('end request'));
         }, [])
+
+    useEffect(() => {
+        // step = spinner.current.clientWidth / topics.length;
+    }, [])
 
     return (
         <section className={Style.topics}>
             <div className={Style.topics__wrapper}>
                 <CaretLeft 
                     size={32} 
-                    className={`${Style.caret} ${Style.caret__left}`}
+                    className={`
+                        ${Style.caret} 
+                        ${Style.caret__left}
+                        ${topics.length * step === (-translate) ? Style.disable : Style.enable}
+                    `}
                     onClick={() => move('left')}
                 />
                 <CaretRight 
                     size={32} 
-                    className={`${Style.caret} ${Style.caret__right}`}
+                    className={`
+                        ${Style.caret} 
+                        ${Style.caret__right}
+                        ${translate === 0 ? Style.disable : Style.enable}
+                    `}
                     onClick={() => move('right')}
                 />
 
