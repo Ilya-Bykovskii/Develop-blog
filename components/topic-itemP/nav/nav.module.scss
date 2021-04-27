@@ -1,0 +1,16 @@
+.nav {
+    margin: 50px auto;
+    position: relative;
+    width: 95vw;
+
+    .nav__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+
+        .nav__item {
+            list-style: none;
+        }
+    }
+}

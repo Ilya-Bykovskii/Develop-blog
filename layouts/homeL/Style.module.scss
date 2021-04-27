@@ -1,7 +1,7 @@
 .header {
     background-image: url('./logo_theme.jpg');
     background-size: 100%;
-    width: 100%;
+    width: 100vw;
     height: 60vw;
     color: #fff;
 
@@ -22,7 +22,7 @@
         }
 
         .intro {
-            margin-top: 16vw;
+            margin:  16vh 0 100px 0;
             height: 400px;
             width: 40vw;
             color: #aaa;
@@ -34,6 +34,10 @@
             .intro__description{
                 margin: 40px 0 50px 0;
                 font-size: 25px;
+            }
+
+            @media (min-width: 1100) {
+                margin-top: 5vh;
             }
         }
     }

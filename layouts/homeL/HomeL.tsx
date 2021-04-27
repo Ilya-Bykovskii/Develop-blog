@@ -33,9 +33,7 @@ export default function HomeL(props: stdNS.LayoutProps) {
                             Next.JS blog
                         </h1>
                         <p className={Style.intro__description}>
-                            Blog about develop on next.js and web-design
-                            <br/>
-                            More articles, topics and lectures
+                            Blog about develop on next.js and web-design.  More articles, topics and lectures
                         </p>
                         <LMbtn
                             link={'posts'}

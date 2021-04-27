@@ -32,19 +32,24 @@ export default function LinkNavTopic(prop: {id: number}) {
     }
 
     useEffect(() => {
+        setTitle(false);
         loadTitle(prop.id);
     }, [prop])
 
-    return (
-        <div className={LinkStyle.btn}>
-            <Link
-                href={'/topic/[id]'}
-                as={`/topic/${prop.id}`}
-            >
-                <a>
-                    {title}
-                </a>
-            </Link>
-        </div>
-    )
+    if (title) {
+        return (
+            <div className={LinkStyle.btn}>
+                <Link
+                    href={'/topic/[id]'}
+                    as={`/topic/${prop.id}`}
+                >
+                    <a>
+                        {title}
+                    </a>
+                </Link>
+            </div>
+        )
+    }
+
+    return null;
 }

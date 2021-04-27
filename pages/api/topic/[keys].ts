@@ -17,6 +17,9 @@ export default async function getOnceProp(req, res) {
     const data = await fetch(link);
     const json = await data.json();
 
+    if (typeof json != 'object') res.end(JSON.stringify(false))
+    
+
     const result = keys.map(elem => {
         if (json[elem]) return json[elem]
         throw new Error(`key - ${elem} is undefined`)

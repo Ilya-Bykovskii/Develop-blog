@@ -15,13 +15,14 @@ export default function Nav(prop: {id: number}) {
                     key={1} 
                     className={Style.nav__item}
                 >
-                    {(prop.id - 1 > 0) ? 
-                        <LinkNavTopic
-                            id={prop.id - 1}
-                        /> : ''
-                    }
+                    <LinkNavTopic
+                        id={prop.id - 1}
+                    />
                 </li>
-                <li  key={2}>
+                <li  
+                    key={2}
+                    className={Style.nav__item}
+                >
                     <LinkNavTopic
                         id={prop.id + 1}
                     />
