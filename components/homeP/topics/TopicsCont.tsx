@@ -22,9 +22,7 @@ export default function TopicCont() {
     const topicReq = `http://localhost:3000/api/topic/get/6`;
     let step = 87;
 
-    function move(derection: 'left' | 'right') {
-        console.log(translate);
-        
+    function move(derection: 'left' | 'right') {        
         if (derection === 'left' && translate === 0) {
             setTranslate(prev => prev - step)
             return;
@@ -41,7 +39,7 @@ export default function TopicCont() {
                 <TopicPrev status={false}/>
             </li>)
         }
-        return result
+        return result;
     }
 
     useEffect(() => {
@@ -55,9 +53,6 @@ export default function TopicCont() {
         .finally(() => console.log('end request'));
         }, [])
 
-    useEffect(() => {
-        // step = spinner.current.clientWidth / topics.length;
-    }, [])
 
     return (
         <section className={Style.topics}>

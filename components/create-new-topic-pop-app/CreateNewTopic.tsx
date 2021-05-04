@@ -28,21 +28,52 @@ export default function CreateNewTopicPopApp(props: {handler: Function}) {
     }, [])
 
     function fetchData(): void {
-        const data: reqNS.PostArticle = {
-            title: title,
-            prev: prev,
-            body: body, 
-        }
+        if (!(title && prev && body)) return;
 
-        if (!validData(data)[0])     
+        const [status, ...props] = validData({
+            title,
+            body,
+            prev
+        });
+
+        if (!status) return;
+
+        fetch('http://localhost:4000/topic-prev', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title, 
+                preview: prev, 
+                creteID: 1,
+            })
+        })
+    
+        fetch('http://localhost:4000/topic-full', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title, 
+                body: [body], 
+                creteID: 1,
+            })
+        })
     }
 
     return (
         <section className={Style['create-topic']}>
             <form 
                 className={Style['create-topic__form']}
+                onSubmit={(event: React.FormEvent<HTMLFormElement>) => {
+                    event.preventDefault();
+                    fetchData();
+                    props.handler();
+                }}
+                method={'Post'}
             >
-
                 <X 
                     size={28} 
                     className={Style['create-topic__close-ic']}
@@ -91,7 +122,6 @@ export default function CreateNewTopicPopApp(props: {handler: Function}) {
 
                 <button
                     className={Style['create-topic__submit']}
-                    onClick={() => fetchData()}
                 >
                     Submit
                 </button>

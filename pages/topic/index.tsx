@@ -102,9 +102,6 @@ export default function About(props: {json: reqNS.ArticlePrev[]}) {
                     />)
                     }
                 </div>
-                <div className={Style['loader-wrapper']}>
-                    {!loaded ? <Loader type={'Plane'}/> : null}
-                </div>
             </section>
             <CreateNewTopic
                 handler={() => setPopAppHedden(prev => !prev)}

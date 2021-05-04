@@ -16,7 +16,7 @@ import NavLink from '../nav-link/NavLink'
 // styles:
 import Style from './TopicPrev.module.scss';
 
-export default function TopicPrev(data: Props) {
+export default function TopicPrev(data: Props | {status: boolean}) {
 
     if (!data.status) return (
         <div className={Style.item}>

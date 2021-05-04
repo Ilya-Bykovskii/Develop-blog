@@ -29,10 +29,7 @@ export async function getServerSideProps<GetServerSideProps>(ctx) {
 
 export default function TopicsFull(topic: {json: reqNS.ArticleFull}) {
     const route = useRouter();
-    const data = topic.json
-
-    console.log('new render');
-    
+    const data = topic.json    
 
     return (
         <BaseL

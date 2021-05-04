@@ -29,5 +29,5 @@ export default function validData(data: reqNS.PostArticle): [boolean, string[]?]
         if (!checkString(dataStrings[key])) errors.push(key);
     }
 
-    return errors.length ? [true] : [false, errors];
+    return !errors.length ? [true] : [false, errors];
 }
