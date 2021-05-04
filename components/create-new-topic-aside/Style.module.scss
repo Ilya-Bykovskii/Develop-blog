@@ -1,0 +1,33 @@
+.create-topic {
+    position: relative;
+    padding: 10px 25px;
+    text-align: justify;
+    display: inline-block;
+    color: #fff;
+    width: 15vw;
+    height: 200px;
+    background: rgb(31, 138, 135);
+    border-radius: 7px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    right: -3vw;
+    top: 100px;
+
+    .create-topic__btn {
+        position: relative;
+        margin: auto;
+        width: 11vw;
+        cursor: pointer;
+        padding: 5px 3px;
+        background: none;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 15px;
+        top: 40px;
+        transition: all 200ms linear 100ms;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

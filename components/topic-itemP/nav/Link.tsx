@@ -16,7 +16,6 @@ export default function LinkNavTopic(prop: {id: number}) {
 
     function loadTitle(id: number) {        
         const linkActule = `${link}(${id})title`;
-        console.log(linkActule);
 
         fetch(linkActule)
         .then(req => {
@@ -27,8 +26,7 @@ export default function LinkNavTopic(prop: {id: number}) {
         .then(json => setTitle(json))
         .then(() => setStatus(true))
         .catch(err => console.error(err))
-        .catch(() => setStatus(false))
-        .finally(() => console.log('requst sended'));        
+        .catch(() => setStatus(false));
     }
 
     useEffect(() => {

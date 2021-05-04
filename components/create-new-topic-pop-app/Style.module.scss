@@ -1,0 +1,79 @@
+.create-topic {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    align-items: center;
+    // background: rgba($color: #000000, $alpha: 0.2);
+    width: 100%;
+    height: 100%;
+
+    .create-topic__form {
+        width: 800px;
+        height: 500px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        padding: 20px 40px;
+
+        .create-topic__close-ic {
+            position: relative;
+            top: -5px;
+            right: -710px;
+            transition: all 200ms ease-in-out 100ms;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+                color: red;
+            }
+        }
+
+        .cerate-topic__input--title {
+            height: 32px;
+        }
+
+        .cerate-topic__input--prev {
+            height: 50px;
+        }
+
+        .cerate-topic__input--body {
+            height: 100px;
+        }
+
+        .create-topic__submit {
+            background: none;
+            font-size: 21px;
+            margin-top: 12px;
+            width: 100px;
+            padding: 8px 7px;
+            border: 1px solid #333;
+            color: #333;
+            border-radius: 7px;
+            cursor: pointer; 
+            transition: all 200ms ease-in-out 100ms;
+
+            &:hover {
+                transform: scale(1.05);
+                color: #000;
+            }
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0 ;
+
+            span {
+                font-size: 21px;
+                margin-top: 7px;
+            }
+
+            textarea {
+                resize: none;
+            }
+        }
+
+    }
+}

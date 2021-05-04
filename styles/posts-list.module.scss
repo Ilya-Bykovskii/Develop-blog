@@ -1,0 +1,22 @@
+.topic-list {
+    margin-top: 40px;
+    width: 75vw;
+    display: inline-block;
+
+    .topic-list__wrapper {
+        // width: 90vw;
+        position: relative;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .nav__item {
+            margin: 26px 1vw;
+        }
+    }
+    .loader-wrapper {
+        width: inherit;
+        display: flex;
+        justify-content: center;
+    }
+}

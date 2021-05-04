@@ -1,7 +1,6 @@
 .header {
     background-image: url('./logo_theme.jpg');
     background-size: 100%;
-    width: 100vw;
     height: 60vw;
     color: #fff;
 
@@ -11,7 +10,6 @@
         background-color:rgba(0, 0, 0, 0.3);
         background-position-y: 0;
         padding: 20px 7vw;
-        // display: flex;
 
         .title {
             display: inline-block;
@@ -22,7 +20,7 @@
         }
 
         .intro {
-            margin:  16vh 0 100px 0;
+            margin: 10vw 0 100px 0;
             height: 400px;
             width: 40vw;
             color: #aaa;
@@ -34,6 +32,10 @@
             .intro__description{
                 margin: 40px 0 50px 0;
                 font-size: 25px;
+                
+                @media (max-width: 900px) {
+                    display: none;        
+                }
             }
 
             @media (min-width: 1100) {

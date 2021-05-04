@@ -21,8 +21,6 @@ export async function getServerSideProps<GetServerSideProps>(ctx) {
 
     const res = await fetch(link + ID);
     const json = await res.json();
-
-    console.log('render server side props');
     
     return {
         props: {json}

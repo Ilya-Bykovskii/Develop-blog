@@ -7,7 +7,7 @@ import {CaretLeft, CaretRight, Spinner} from 'phosphor-react';
 import {useEffect, useState, useRef} from 'react';
 
 // components
-import TopicPrev from './TopicPrev';
+import TopicPrev from '../../topic-preview/TopicPrev';
 
 // styles:
 import Style from './TopicCont.module.scss';
@@ -19,7 +19,7 @@ export default function TopicCont() {
 
     const spinner = useRef<HTMLHeadingElement>();
 
-    const topicReq = `http://localhost:3000/api/topic/gen`;
+    const topicReq = `http://localhost:3000/api/topic/get/6`;
     let step = 87;
 
     function move(derection: 'left' | 'right') {

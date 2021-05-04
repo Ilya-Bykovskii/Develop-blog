@@ -8,7 +8,6 @@ import {stdNS} from './../../namespace/std';
 // components:
 import Nav from './../../components/nav/Nav';
 import LMbtn from './../../components/lern-more-btn/LMbtn';
-import Pyromid from './../../components/pyromid/Pyromid';
 
 // styles:
 import Style from './Style.module.scss'

@@ -8,7 +8,7 @@ import {stdNS} from './../../namespace/std';
 import NavLink from './../nav-link/NavLink'
 
 // styles
-import Style from './Style.module.scss'
+import Style from './Nav.module.scss'
 
 // export function getServerSideProps(req: )
 
